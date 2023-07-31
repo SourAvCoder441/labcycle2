@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    char a[50];
+    int i,vc=0,cc=0,ws=0;
+    printf("Enter the sentence ending with dollar symbol\n");
+    fgets(a,50,stdin);
+    for(i=0;a[i]!='$';i++)
+        {
+            if(a[i]=='A' || a[i]=='a' || a[i]=='E' || a[i]=='e'|| a[i]=='I' || a[i]=='i' ||  a[i]=='O' || a[i]=='o' || a[i]=='U' || a[i]=='u')
+                {
+                    vc++;
+                }
+            else if(a[i]==' ')
+                {
+                    ws++;
+                }
+            else
+                {
+                    cc++;
+                }
+        }
+            printf("The vowel count %d\n",vc);
+            printf("The consonant count %d\n",cc);
+            printf("The white space count %d\n",ws);
+}
